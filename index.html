@@ -7,7 +7,7 @@
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 
-    <link rel="stylesheet" type="text/css" href="assets/stylesheets/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -24,9 +24,9 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                YOU: 0
+                YOU: <span id="score-you">0</span>
                 <br>
-                COMPUTER: 0
+                COMPUTER: <span id="score-computer">0</span>
             </div>
             <div class="col text-right">
                 LEVEL:
@@ -39,49 +39,58 @@
 <div class="content">
     <div class="container">
         <div class="match text-center py-4">
-            MATCH: 2
+            MATCH: <span id="match">1</span>
         </div>
         <div class="table-game text-center">
+            <div class="show-winner">
+                <div class="show-winner-message"></div>
+                <div class="show-winner-button">
+                    <button class="btn btn-secondary" id="next-match-button">NEXT MATCH</button>
+                </div>
+            </div>
             <div class="first-row">
-                <a class="first-col-1 selected">
-
+                <a class="first-col-1 selected" data-value="0" id="position-0">
+                    &nbsp;
                 </a>
-                <a class="first-col-2">
-
+                <a class="first-col-2" data-value="1" id="position-1">
+                    &nbsp;
                 </a>
-                <a class="first-col-3">
-
+                <a class="first-col-3" data-value="2" id="position-2">
+                    &nbsp;
                 </a>
             </div>
             <div class="second-row">
-                <a class="second-col-1">
-
+                <a class="second-col-1" data-value="3" id="position-3">
+                    &nbsp;
                 </a>
-                <a class="second-col-2">
-
+                <a class="second-col-2" data-value="4" id="position-4">
+                    &nbsp;
                 </a>
-                <a class="second-col-3 selected">
-
+                <a class="second-col-3 selected" data-value="5" id="position-5">
+                    &nbsp;
                 </a>
             </div>
             <div class="third-row">
-                <a class="third-col-1">
-
+                <a class="third-col-1" data-value="6" id="position-6">
+                    &nbsp;
                 </a>
-                <a class="third-col-2 selected">
-
+                <a class="third-col-2 selected" data-value="7" id="position-7">
+                    &nbsp;
                 </a>
-                <a class="third-col-3">
-
+                <a class="third-col-3" data-value="8" id="position-8">
+                    &nbsp;
                 </a>
-            </div>
-
-
-            <div class="button-tic text-right py-4 my-5">
-                <button type="button" class="btn">Tic Tac Toe</button>
             </div>
         </div>
-    </div>
+        <div class="button-tic text-right py-4 my-5">
+            <a href="index-first.html" class="btn">Tic Tac Toe</a>
+        </div>
 
+
+
+    </div>
+</div>
+
+    <script src="assets/js/app.js"></script>
 </body>
 </html>

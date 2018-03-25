@@ -1,0 +1,121 @@
+@import "variables-first";
+
+@mixin size($dimensiunea){
+  width: $dimensiunea + 2em;
+  height: $dimensiunea;
+}
+@mixin size2($dimensiunea){
+  width: $dimensiunea + 8em;
+  height:$dimensiunea + 4em
+}
+
+@mixin size-tab($dimensiunea){
+  width: $dimensiunea;
+  height: $dimensiunea - 1.4em;
+}
+@mixin size-tab2($dimensiunea){
+  width: $dimensiunea + 13em;
+  height:$dimensiunea + 6.5em
+}
+@mixin size-pc($dimensiunea){
+  width:$dimensiunea+ 1.5em;
+  height: $dimensiunea;
+}
+@mixin size-pc2($dimensiunea){
+  width:$dimensiunea + 9em;
+  height: $dimensiunea + 4.5em;
+}
+
+
+.header{
+  background-color: $backround;
+  padding-top:$header-padding-mobil;
+  border-bottom: $border;
+}
+.title{
+  text-align: center;
+  font-family: 'Cabin Sketch', cursive;
+}
+.T1{
+  margin-top: $text-margin;
+}
+.T2{
+  margin-top: $intre-text;
+}
+
+.size{
+  font-size: $fontsize;
+}
+
+.line{
+  background-color: $backround;
+  border:$border;
+  padding: 0.1em;
+  margin-bottom: 7em;
+}
+.B{
+  font-family: 'Amatic SC', cursive;
+  background-color: $but-backround;
+  color: #000;
+
+}
+.level{
+  @include size($square);
+  border:0;
+}
+.B2{
+  @include size2($square);
+  margin-top: 3em;
+  border:$border;
+}
+
+.but-margin{
+  font-size: $fontsize2;
+  margin: 0em;
+}
+
+@media screen and (min-width:600px){
+  .header{
+    padding-top: $header-padding-mobil + 2em;
+  }
+  .size{
+    font-size: $fontsize+4em;
+  }
+  .line{
+    padding: 0.3em;
+    margin-bottom: 10em;
+  }
+  .level{
+    @include size-tab($square-tab);
+  }
+  .B2{
+    @include size-tab2($square-tab);
+  }
+  .but-margin{
+    font-size: $fontsize2 + 4em;
+    margin:0;
+  }
+}
+
+@media screen and (min-width:1000px){
+  .header{
+    padding-top: $header-padding-mobil;
+  }
+  .size{
+    font-size: $fontsize+2em;
+  }
+  .line{
+    padding: 0.2em;
+    margin-bottom: 6em;
+  }
+  .level{
+    @include size-pc($square-pc);
+  }
+  .B2{
+    @include size-pc2($square-pc);
+  }
+  .but-margin{
+    font-size: $fontsize2+1em;
+    margin:0;
+  }
+}
